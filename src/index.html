@@ -6,9 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
   <script src="notepad.js"></script>
+  <script src="https://kit.fontawesome.com/90393835af.js" crossorigin="anonymous"></script>
   <title>Notepad</title>
 </head>
 <body>
-  <input type="text" class="line">
+  <div class="titlebar drag">
+    <button class="title nodrag">Notepad</button>
+    <button id="closeBtn" class="nodrag"><i class="fa-solid fa-xmark"></i></button>
+    <button id="minimizeBtn" class="nodrag"><i class="fa-solid fa-minus"></i></button>
+  </div>
+  <textarea name="txtarea" id="txtarea" cols="60" rows="100"></textarea>
 </body>
 </html>

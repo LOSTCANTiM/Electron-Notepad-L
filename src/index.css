@@ -1,12 +1,51 @@
-body { padding: 0%; margin: 0%; background-color: #130C12; }
+body
+{
+  padding: 0%;
+  margin: 0%;
+  overflow-x: hidden;
+}
 
-input
+@font-face {
+  font-family: consolas;
+  src: url("/Inconsolata-Regular.ttf");
+}
+
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-thumb { background-color: rgb(255, 148, 148); }
+
+.titlebar
 {
   width: 100%;
-  padding: 5px;
-  color: whitesmoke;
-  outline: none;
-  border: none;
-  background-color: transparent;
+  background-color: rgb(255, 148, 148);
+  overflow: hidden;
+  position: sticky;
+  top: 0%;
 }
-input:focus, input:hover { background-color: #FFFFFc10; }
+.titlebar button
+{
+  float: right;
+  padding: 10px 15px;
+  transition: 0.2s;
+  color: black;
+  text-decoration: none;
+  font-family: Consolas;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.titlebar button.title { float: left; }
+.titlebar button#minimizeBtn:hover { background-color: white; color: rgb(255, 148, 148); }
+.titlebar button#closeBtn:hover { background-color: rgb(255, 61, 61); color: white; }
+
+.drag { -webkit-app-region: drag; }
+.nodrag { -webkit-app-region: no-drag; }
+
+textarea
+{
+  outline: none;
+  width: 99%;
+  padding: 10px;
+  border: none;
+  resize: none;
+  font-family: consolas;
+}

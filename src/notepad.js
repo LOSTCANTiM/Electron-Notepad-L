@@ -1,9 +1,23 @@
+const { ipcRenderer } = require('electron');
+
+var lines = 100;
+
 document.addEventListener('keydown', function (key) {
-    if (key.code == "Enter") {
-        var e = document.createElement('input');
-        document.body.appendChild(e);
-        e.focus();
+    if (key.code == "Space" || key.code == "Enter") {
+        var e = document.getElementById('txtarea');
+        lines++;
+        e.rows = lines;
     }
 });
 
-console.log("hello");
+window.onload = function () {
+    document.getElementById("minimizeBtn").addEventListener('click', () => {
+        ipcRenderer.send('minimize');
+    });
+
+    document.getElementById("closeBtn").addEventListener('click', () => {
+        ipcRenderer.send('close');
+    });
+}
+
+// console.log("hello");
