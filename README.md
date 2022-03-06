@@ -46,7 +46,7 @@ ipcMain.on('close', () => {
 });
 ```
 
-Your custom titleBar is ready!
+Your custom titleBar is ready! <br>
 <img src="https://cdn.discordapp.com/attachments/888375074808287304/949979404409384980/unknown.png">
 
 
