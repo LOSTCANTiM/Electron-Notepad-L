@@ -7,10 +7,10 @@ The code uses `<textarea>` tag for input area
 
 And it increases the rows of textarea whenever you press Enter or Space
 
+# Custom Title Bar Electron JS
 Also How I Implemented the custom titlebar:
 I had two JS scripts that formed the backend - `index.js` [the main one] nad `notepad.js` [that handles the notepad functions]
 
-# Custom Title Bar Electron JS
 **Implementing Titlebar:**
 ```html
 <div class="titlebar drag">
