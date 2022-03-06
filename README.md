@@ -2,7 +2,7 @@
 A notepad application I made for learning purposes
 Step 1: `npx create-electron-app@latest`
 
-Adding custom titlebar: https://github.com/LOSTCANTiM/Electron-Notepad-L/blob/master/README.md#custom-title-bar-electron-js
+Adding custom titlebar: <a href="https://github.com/LOSTCANTiM/Electron-Notepad-L/blob/master/README.md#custom-title-bar-electron-js">Custom Titlebar</a>
 
 how the code works
 The code uses `<textarea>` tag for input area
