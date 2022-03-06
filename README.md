@@ -16,7 +16,8 @@ I had two JS scripts that formed the backend - `index.js` [the main one] nad `no
     <button class="title nodrag">Notepad</button>
     <button id="closeBtn" class="nodrag"><i class="fa-solid fa-xmark"></i></button>
     <button id="minimizeBtn" class="nodrag"><i class="fa-solid fa-minus"></i></button>
-</div>```
+</div>
+```
 Here's the HTML Code for the titlebar
 
 The css property to drag objects in _Electron_:
