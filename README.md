@@ -3,6 +3,7 @@ A notepad application I made for learning purposes
 Step 1: `npx create-electron-app@latest`
 
 Adding custom titlebar: <a href="https://github.com/LOSTCANTiM/Electron-Notepad-L/blob/master/README.md#custom-title-bar-electron-js">Custom Titlebar</a>
+Writing data in a Pre existing file: <a href="https://github.com/LOSTCANTiM/Electron-Notepad-L/blob/master/README.md#saving-and-reading-files">Writing Files</a>
 
 how the code works
 The code uses `<textarea>` tag for input area
@@ -56,7 +57,7 @@ Your custom titleBar is ready! <br>
 # Saving And Reading Files
 I'll be using the `fs` node.js module for these writing and reading opertations
 
-I added a save icon on the titlebar when you click it, this takes the value present in the textarea
+I added a save icon on the titlebar when you click it, this takes the value present in the textarea <br>
 `var value = document.getElementById('txtarea').value;`
 
 Then to write in a **Pre existing File**:
