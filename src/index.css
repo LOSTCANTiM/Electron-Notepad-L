@@ -34,7 +34,8 @@ body
   outline: none;
 }
 .titlebar button.title { float: left; }
-.titlebar button#minimizeBtn:hover { background-color: white; color: rgb(255, 148, 148); }
+.titlebar button.title:hover { background-color: rgb(255, 148, 148); color: black; }
+.titlebar button:hover { background-color: white; color: rgb(255, 148, 148); }
 .titlebar button#closeBtn:hover { background-color: rgb(255, 61, 61); color: white; }
 
 .drag { -webkit-app-region: drag; }

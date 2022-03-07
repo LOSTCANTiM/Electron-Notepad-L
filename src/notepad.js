@@ -1,4 +1,5 @@
 const { ipcRenderer } = require('electron');
+const fs = require('fs');
 
 var lines = 100;
 
@@ -8,7 +9,13 @@ document.addEventListener('keydown', function (key) {
         lines++;
         e.rows = lines;
     }
+
+    console.log(key.code);
 });
+
+// function writeFile (data) {
+//     console.log(data);
+// }
 
 window.onload = function () {
     document.getElementById("minimizeBtn").addEventListener('click', () => {
@@ -18,6 +25,11 @@ window.onload = function () {
     document.getElementById("closeBtn").addEventListener('click', () => {
         ipcRenderer.send('close');
     });
-}
 
-// console.log("hello");
+    document.getElementById('saveBtn').addEventListener('click', () => {
+        var value = document.getElementById('txtarea').value;
+        fs.writeFile("test.txt", value.toString(), (err) => {
+            if (err) throw err;
+        });
+    });
+};
