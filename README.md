@@ -51,6 +51,22 @@ ipcMain.on('close', () => {
 ```
 
 Your custom titleBar is ready! <br>
-<img src="https://cdn.discordapp.com/attachments/888375074808287304/949979404409384980/unknown.png">
+<img src="https://cdn.discordapp.com/attachments/888375074808287304/949979404409384980/unknown.png" width="25%">
 
+# Saving And Reading Files
+I'll be using the `fs` node.js module for these writing and reading opertations
+
+I added a save icon on the titlebar when you click it, this takes the value present in the textarea
+`var value = document.getElementById('txtarea').value;`
+
+Then to write in a **Pre existing File**:
+```js
+const fs = require('fs'); // get the file system module
+
+var value = document.getElementById('txtarea').value; // getting the value in textarea
+
+fs.writeFile("filename.txt", value.toString(), (err) => {
+   if (err) throw err; 
+});
+```
 
