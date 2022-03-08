@@ -12,10 +12,10 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 500,
     height: 500,
-    // minHeight: 500,
-    // maxHeight: 500,
-    // minWidth: 500,
-    // maxWidth: 500,
+    minHeight: 500,
+    maxHeight: 500,
+    minWidth: 500,
+    maxWidth: 500,
     frame: false,
     fullscreenable: false,
     minimizable: false,
@@ -39,7 +39,7 @@ const createWindow = () => {
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
