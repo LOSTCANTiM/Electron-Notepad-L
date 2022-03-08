@@ -41,6 +41,20 @@ body
 .drag { -webkit-app-region: drag; }
 .nodrag { -webkit-app-region: no-drag; }
 
+.statusbar
+{
+  position: fixed;
+  bottom: 0%;
+  background-color: rgb(216, 216, 216);
+  width: 100%;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: consolas;
+}
+
+.hidden { visibility: hidden; position: absolute; top: 300%; }
+
 textarea
 {
   outline: none;

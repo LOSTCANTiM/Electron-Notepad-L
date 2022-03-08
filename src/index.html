@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="index.css">
   <script src="notepad.js"></script>
   <script src="https://kit.fontawesome.com/90393835af.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <title>Notepad</title>
 </head>
 <body>
@@ -14,8 +15,12 @@
     <button class="title nodrag">Notepad</button>
     <button id="closeBtn" class="nodrag"><i class="fa-solid fa-xmark"></i></button>
     <button id="minimizeBtn" class="nodrag"><i class="fa-solid fa-minus"></i></button>
-    <button id="saveBtn" class="nodrag"><i class="fa-solid fa-floppy-disk"></i></button>
+    <button id="saveBtn" class="nodrag">Export</button>
   </div>
+  <input class="hidden" type="File" id="openFile">
   <textarea name="txtarea" id="txtarea" cols="60" rows="100"></textarea>
+  <div class="statusbar">
+    <p id="sts"><i class="fa-regular fa-circle"></i> Unsaved work.</p>
+  </div>
 </body>
 </html>
