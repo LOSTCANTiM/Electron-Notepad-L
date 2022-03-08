@@ -2,7 +2,8 @@
 A notepad application I made for learning purposes
 Step 1: `npx create-electron-app@latest`
 
-Adding custom titlebar: <a href="https://github.com/LOSTCANTiM/Electron-Notepad-L/blob/master/README.md#custom-title-bar-electron-js">Custom Titlebar</a>
+Adding custom titlebar: <a href="https://github.com/LOSTCANTiM/Electron-Notepad-L/blob/master/README.md#custom-title-bar-electron-js">Custom Titlebar</a> <br>
+Writing data in a Pre existing file: <a href="https://github.com/LOSTCANTiM/Electron-Notepad-L/blob/master/README.md#saving-and-reading-files">Writing Files</a>
 
 how the code works
 The code uses `<textarea>` tag for input area
@@ -51,6 +52,22 @@ ipcMain.on('close', () => {
 ```
 
 Your custom titleBar is ready! <br>
-<img src="https://cdn.discordapp.com/attachments/888375074808287304/949979404409384980/unknown.png">
+<img src="https://cdn.discordapp.com/attachments/888375074808287304/949979404409384980/unknown.png" width="25%">
 
+# Saving And Reading Files
+I'll be using the `fs` node.js module for these writing and reading opertations
+
+I added a save icon on the titlebar when you click it, this takes the value present in the textarea <br>
+`var value = document.getElementById('txtarea').value;`
+
+Then to write in a **Pre existing File**:
+```js
+const fs = require('fs'); // get the file system module
+
+var value = document.getElementById('txtarea').value; // getting the value in textarea
+
+fs.writeFile("filename.txt", value.toString(), (err) => {
+   if (err) throw err; 
+});
+```
 
